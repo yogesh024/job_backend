@@ -5,7 +5,6 @@ import bcrypt from "bcryptjs";
 import { createError } from "../utils/error.js";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
-import { status } from "init";
 
 
 
