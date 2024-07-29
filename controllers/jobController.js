@@ -29,11 +29,10 @@ export const getJobs=async(req,res,next)=>{
          const jobs=await Job.find();
          res.status(200).json(jobs);
     }
-    catch{(err)=>{
+    catch(err){
         next(err);
     }
-
-    }
+    
 }
 export const getJobsByemail=async (req, res, next) => {
     try {
