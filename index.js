@@ -41,7 +41,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-    origin: "http://localhost:5173", // your frontend domain
+    origin: "https://mern-job-frontend-ymuw.vercel.app/", // your frontend domain
     credentials: true
   }));
 app.use(cookieParser());
