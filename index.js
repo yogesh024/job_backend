@@ -40,10 +40,10 @@ mongoose.connection.on("disconnected", () => {
 const app = express();
 
 app.use(express.json());
-app.use(cors({
-    origin: "https://mern-job-frontend-ymuw.vercel.app/", // your frontend domain
-    // credentials: true
-  }));
+// app.use(cors({
+//     origin: "https://mern-job-frontend-ymuw.vercel.app/", // your frontend domain
+//     // credentials: true
+//   }));
 app.use(cookieParser());
 
 app.use(fileUpload({
