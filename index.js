@@ -40,19 +40,10 @@ mongoose.connection.on("disconnected", () => {
 const app = express();
 
 app.use(express.json());
-const allowedOrigins = ['https://mern-job-frontend-ymuw.vercel.app'];
-
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  }
-};
-
-app.use(cors(corsOptions));
+app.use(cors({
+    origin: "https://mern-job-frontend-ymuw.vercel.app/", // your frontend domain
+    // credentials: true
+  }));
 app.use(cookieParser());
 
 app.use(fileUpload({
